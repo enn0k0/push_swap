@@ -6,7 +6,7 @@ CC = cc
 CFLAGS = 
 ##-------------use original---------------------
 
-SRCS = push_swap.c ft_printf.c ft_helpers.c ft_libft_functions.c simple_algorithm.c stack_operations.c ft_medium_algorithm.c
+SRCS = push_swap.c ft_printf.c ft_helpers.c ft_libft_functions.c simple_algorithm.c stack_operations.c ft_medium_algorithm.c ft_complex_agorithm.c
 
 OBJS = $(SRCS:.c=.o)
 

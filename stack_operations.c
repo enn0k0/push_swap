@@ -6,7 +6,7 @@
 /*   By: ewolf <ewolf@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 15:24:53 by ewolf             #+#    #+#             */
-/*   Updated: 2026/11/02 17:28:29 by ewolf            ###   ########.fr       */
+/*   Updated: 2026/11/03 16:09:25 by ewolf            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,17 @@ void ft_convert_to_arr(int argc, char **argv, int *arr)
 	}
 }
 
-void	ft_swap(int *arr)
+int	ft_swap(int *arr)
 {
 	int	c;
 
 	c = arr[0];
 	arr[0] = arr[1];
 	arr[1] = c;
+	return (1);
 }
 
-void	ft_rotate(int *arr, int len)
+int	ft_rotate(int *arr, int len)
 {
 	int	i;
 	int	first_numb;
@@ -47,9 +48,10 @@ void	ft_rotate(int *arr, int len)
 		i++;
 	}
 	arr[i - 1] = first_numb;
+	return (1);
 }
 
-void ft_reverse_rotate(int *arr, int len)
+int ft_reverse_rotate(int *arr, int len)
 {
 	int	last_numb;
 
@@ -60,9 +62,10 @@ void ft_reverse_rotate(int *arr, int len)
 		len--;
 	}
 	arr[0] = last_numb;
+	return (1);
 }
 
-void ft_push(int *src, int *dst, int *len_src, int *len_dst)
+int ft_push(int *src, int *dst, int *len_src, int *len_dst)
 {
 	int	swap_int;
 	int	i;
@@ -83,6 +86,7 @@ void ft_push(int *src, int *dst, int *len_src, int *len_dst)
 	}
 	dst[0] = swap_int;
 	(*len_dst)++;
+	return (1);
 }
 
 
